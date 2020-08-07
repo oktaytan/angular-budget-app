@@ -12,8 +12,8 @@
 
 <section class="add-item">
   <div class="add-item-container">
-    <app-add-item-form></app-add-item-form>
+    <app-add-item-form (formSubmit)="addItem($event)"></app-add-item-form>
   </div>
 </section>
 
-<app-budget-item-list></app-budget-item-list>
+<app-budget-item-list [budgetItems]="budgetItems" (deleteItem)="delete($event)"></app-budget-item-list>
