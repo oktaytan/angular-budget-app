@@ -1,0 +1,53 @@
+@import "../../main-styles";
+
+.navbar {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+  .navbar_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+
+    .navbar-item {
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+  }
+}
+
+.total-budget-section {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-grey;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+  h1 {
+    font-weight: 900;
+    font-size: 50px;
+
+    &.green {
+      color: $green;
+    }
+
+    &.red {
+      color: $red;
+    }
+  }
+}
+
+.add-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
+    width: 600px;
+    height: 50px;
+    padding: 1.5rem 0;
+  }
+}
