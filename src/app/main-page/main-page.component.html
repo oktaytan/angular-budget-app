@@ -7,7 +7,8 @@
 </nav>
 
 <section class="total-budget-section is-light">
-  <h1 class="red">1500</h1>
+  <h1 [ngClass]="{'red': totalBudget < 0, 'green': totalBudget > 0}">
+    {{ totalBudget|currency:'CAD':'symbol-narrow':'1.0'}}</h1>
 </section>
 
 <section class="add-item">
@@ -16,4 +17,5 @@
   </div>
 </section>
 
-<app-budget-item-list [budgetItems]="budgetItems" (deleteItem)="delete($event)"></app-budget-item-list>
+<app-budget-item-list [budgetItems]="budgetItems" (deleteItem)="delete($event)" (update)="updateItem($event)">
+</app-budget-item-list>

@@ -10,6 +10,7 @@ export class BudgetItemCardComponent implements OnInit {
   @Input() item: BudgetItem;
   // tslint:disable-next-line: no-output-on-prefix
   @Output() onDeleteEvent: EventEmitter<any> = new EventEmitter<any>();
+  @Output() cardClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 
@@ -17,5 +18,9 @@ export class BudgetItemCardComponent implements OnInit {
 
   onDelete() {
     this.onDeleteEvent.emit();
+  }
+
+  onCardClick(): void {
+    this.cardClick.emit();
   }
 }

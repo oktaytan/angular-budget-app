@@ -60,6 +60,10 @@
 
     // Vertically center the children elements
     align-items: center;
+
+    p {
+      margin: 0;
+    }
   }
 
   .amount {
@@ -70,6 +74,7 @@
       color: #ffffff;
       padding: 0 0.3rem;
       font-weight: 900;
+      margin: 0;
     }
   }
 }
